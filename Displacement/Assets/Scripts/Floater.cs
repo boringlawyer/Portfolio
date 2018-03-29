@@ -20,4 +20,10 @@ public class Floater : MonoBehaviour
 			rb.velocity = (this.transform.position - other.transform.position).normalized * displacementForce;
 		}
 	}
+
+	protected void MoveTowardsPlayer()
+	{
+		rb.velocity = (GameObject.Find("Ball").transform.position - this.transform.position).normalized * 2;
+	}
+
 }

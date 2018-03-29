@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\EventSystem.cs" />
      <Compile Include="Assets\Scripts\Floater.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
+     <Compile Include="Assets\Scripts\Mine.cs" />
      <Compile Include="Assets\Scripts\MousePos.cs" />
      <Compile Include="Assets\Scripts\PopularReferences.cs" />
      <Compile Include="Assets\Scripts\Seeker.cs" />

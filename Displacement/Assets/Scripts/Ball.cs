@@ -3,20 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.SceneManagement;
 
-public class Ball : MonoBehaviour 
+public class Ball : Floater 
 {
 
 	// Use this for initialization
-	void Start () 
+	protected override void Start () 
 	{
-		
+		base.Start();
 	}
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
 		if (other.gameObject.CompareTag("Enemy"))
 		{
-			EventSystem.GameOver();
+		//	EventSystem.GameOver();
 		}
 	}
+
+	/*protected override void OnTriggerEnter2D(Collider2D other)
+	{
+		base.OnTriggerEnter2D(other);
+	}*/
 }

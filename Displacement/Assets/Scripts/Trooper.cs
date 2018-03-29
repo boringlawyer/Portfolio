@@ -10,8 +10,4 @@ public class Trooper : Floater {
 		base.Start();
 		MoveTowardsPlayer();
 	}
-	protected void MoveTowardsPlayer()
-	{
-		rb.velocity = (GameObject.Find("Ball").transform.position - this.transform.position).normalized * 2;
-	}
 }
