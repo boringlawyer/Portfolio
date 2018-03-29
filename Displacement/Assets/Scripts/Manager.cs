@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.UI;
 using UnityEngine.UI;
-
+// Caleb Katzenstein
+// Displacement
+// Manages the game. Contains central game loop
 public class Manager : MonoBehaviour 
 {
 	[SerializeField] GameObject bubblePrefab;
@@ -20,7 +22,7 @@ public class Manager : MonoBehaviour
 		score = 0;
 	}
 	
-	// Update is called once per frame
+	// Instantiates a bubble based on mouse or touch input
 	void Update () 
 	{
 		if (Input.GetMouseButtonDown(0))

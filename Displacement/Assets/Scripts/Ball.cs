@@ -2,26 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.SceneManagement;
-
+// Caleb Katzenstein
+// Displacement
+// Indirectly controlled by the player. The goal is to keep this from harm
 public class Ball : Floater 
 {
-
-	// Use this for initialization
-	protected override void Start () 
-	{
-		base.Start();
-	}
-
+	// Destroys itself if it collides with an enemy
 	void OnCollisionEnter2D (Collision2D other)
 	{
 		if (other.gameObject.CompareTag("Enemy"))
 		{
-		//	EventSystem.GameOver();
+			EventSystem.GameOver();
 		}
 	}
 
-	/*protected override void OnTriggerEnter2D(Collider2D other)
-	{
-		base.OnTriggerEnter2D(other);
-	}*/
 }

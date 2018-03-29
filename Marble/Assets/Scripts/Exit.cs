@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Exit : MonoBehaviour {
-
-	// Use this for initialization
+public class Exit : MonoBehaviour 
+{
 	[SerializeField] string levelName;
-	void Start () {
-		
-	}
+	// proceeds to the next level if the marble touches this
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.GetComponent<Marble>() != null)

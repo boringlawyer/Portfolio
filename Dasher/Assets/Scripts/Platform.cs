@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Platform : MonoBehaviour {
+/*	DEPRACATED  */
+public class Platform : MonoBehaviour 
+{
 	private Collider2D coll;
 	public static List<Collider2D> allColliders;
 	// Use this for initialization

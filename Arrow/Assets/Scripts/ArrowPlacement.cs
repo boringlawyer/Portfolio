@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Caleb Katzenstein
+// Arrow
+// Places an arrow where the mouse is upon a left click
 public class ArrowPlacement : MonoBehaviour 
 {
 	[SerializeField] GameObject arrow;

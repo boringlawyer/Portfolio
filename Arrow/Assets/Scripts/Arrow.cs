@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 public class Arrow : MonoBehaviour 
 {
-	//public delegate void VoidNoParam();
-	//public event VoidNoParam ScoreIncrease;
 	public UnityEvent scoreIncrease;
 	Rigidbody2D rb;
 	// Use this for initialization
@@ -21,9 +19,6 @@ public class Arrow : MonoBehaviour
 	{
 		if (Input.GetMouseButton(0))
 		{
-			//Quaternion rotationCorrection = Quaternion.Euler(0, 0, 90);
-			//transform.rotation = Quaternion.RotateTowards(Quaternion.FromToRotation(transform.position, MousePos.MousePosition), rotationCorrection, 90);
-			//transform.rotation = Quaternion.FromToRotation(transform.position, MousePos.MousePosition);
 			Vector3 newForward = MousePos.MousePosition - transform.position;
 			// if the mouse is on the arrow, do nothing
 			if (newForward == Vector3.zero)
@@ -40,6 +35,7 @@ public class Arrow : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		// launch this if LMB is released
 		if (Input.GetMouseButtonUp(0) && rb.velocity == Vector2.zero)
 		{
 			rb.AddForce((transform.position - MousePos.MousePosition).normalized * 350);

@@ -5,12 +5,6 @@ using UnityEngine;
 public class Marble : MonoBehaviour
 {
     bool isFrozen = true;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -58,7 +52,7 @@ public class Marble : MonoBehaviour
             GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
-
+    // if this touches a wall, unfreeze it
     public void OnCollisionEnter2D(Collision2D collision)
     {
         isFrozen = false;

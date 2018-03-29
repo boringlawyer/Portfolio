@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Caleb Katzenstein
+// Displacement
+// Destroys other enemies on collision
 public class Mine : Floater 
 {
 

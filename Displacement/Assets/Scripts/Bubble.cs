@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Caleb Katzenstein
+// Displacement
+// Displaces other objects
 public class Bubble : MonoBehaviour 
 {
 	LineRenderer lineRenderer;
 	CircleCollider2D coll;
 	[SerializeField] float maxSize;
-	[SerializeField] float displacementForce;
 	float size = 1;
 	float lerpScale = .01f;
 	// Use this for initialization
 	void Start () 
 	{
+		// set up the lineRenderer to draw a circle
 		lineRenderer = GetComponent<LineRenderer>();
 		coll = GetComponent<CircleCollider2D>();
 		for (int i = 0; i < lineRenderer.positionCount; i++)
@@ -25,7 +27,7 @@ public class Bubble : MonoBehaviour
 		lineRenderer.SetPosition(lineRenderer.positionCount - 1, lineRenderer.GetPosition(0));
 	}
 	
-	// Update is called once per frame
+	// Expand the bubble until it reaches max size
 	void Update () 
 	{
 		size = Mathf.Lerp(size, maxSize, lerpScale);

@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Caleb Katzenstein
+// Arrow
+// The object being hit by the player
 public class Target : MonoBehaviour 
 {
+	// where will this come from?
 	enum LaunchSide {Top, Bottom, Left, Right};
 	LaunchSide launch;
 	Rigidbody2D rb;
@@ -18,6 +21,7 @@ public class Target : MonoBehaviour
 		float yTrajectory = 0;
 		float xPos = 0;
 		float yPos = 0;
+		// determines launch trajectory based on launch
 		switch (launch)
 		{
 			case LaunchSide.Top:
@@ -48,6 +52,7 @@ public class Target : MonoBehaviour
 		transform.position = new Vector3(xPos, yPos, 0);
 		rb.velocity = new Vector2(xTrajectory, yTrajectory).normalized * 5;
 	}
+	// this gets destroyed if arrow hits this, but not if the arrow has not launched yet
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("Arrow") && other.GetComponent<Rigidbody2D>().velocity != Vector2.zero)

@@ -1,18 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Caleb Katzenstein
+// Dasher
+// Allows the player to Dash
 public class Dash : MonoBehaviour 
 {
 	[SerializeField]float dashDistance = 5;
 	bool isOnPlatform = true;
-	[SerializeField] float speed;
-	// Use this for initialization
-	void Start () 
-	{
-		
-	}
-	
+	[SerializeField] float speed;	
 	// Update is called once per frame
 	void Update () 
 	{
@@ -70,6 +66,7 @@ public class Dash : MonoBehaviour
 			EventSystem.GameOver();
 		}
 	}
+	// ends game if this hits an obstacle
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("Obstacle"))
@@ -77,6 +74,7 @@ public class Dash : MonoBehaviour
 			EventSystem.GameOver();
 		}
 	}
+	// stays on a platform if this lands on it, leaves the platform when it dashes off of it
 	void OnTriggerStay2D(Collider2D other)
 	{
 		if (other.gameObject.CompareTag("Platform"))

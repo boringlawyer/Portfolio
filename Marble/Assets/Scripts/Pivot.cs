@@ -15,7 +15,7 @@ public class Pivot : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 	}
 	
-	// Update is called once per frame
+	// Rotate the world based on input
 	void Update ()
     {
         if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer)
@@ -31,17 +31,7 @@ public class Pivot : MonoBehaviour
                 transform.rotation = Quaternion.AngleAxis(currentAngle, Vector3.forward);
             }
         }
-        //if (Application.platform == RuntimePlatform.Android)
-        //{
-            /*float rotAngle = Input.gyro.attitude.eulerAngles.z;
-            Quaternion rotQuat = new Quaternion();
-            rotQuat.eulerAngles = new Vector3(0, 0, rotAngle);
-            transform.rotation = rotQuat;
-            print(rotAngle);*/
-            //transform.rotation = Input.gyro.attitude;
-        //}
         print(Input.gyro.attitude.eulerAngles.z);
         transform.rotation = Quaternion.Euler(0, 0, (Input.gyro.attitude.eulerAngles.z + 90) * 1f);
-        //rb.AddTorque(60, ForceMode2D.Impulse);
     }
 }

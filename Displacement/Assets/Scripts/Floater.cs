@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// the base class of all objects who float, and are affected by bubbles
+// Caleb Katzenstein
+// Displacement
+// the base class of all objects who are affected by bubbles
 public class Floater : MonoBehaviour 
 {
 	protected Rigidbody2D rb;
@@ -12,7 +14,7 @@ public class Floater : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody2D>();
 	}
-
+	// if bubble reaches this, move away from the bubbles origin
 	protected virtual void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("Bubble"))

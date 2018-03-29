@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Caleb Katzenstein
+// Arrow
+// Launches targets throughout the game
 public class TargetLauncher : MonoBehaviour 
 {
 	[SerializeField] GameObject target;
@@ -10,7 +12,7 @@ public class TargetLauncher : MonoBehaviour
 	{
 		StartCoroutine(LaunchTarget());
 	}
-	
+	// creates a target every three seconds
 	IEnumerator LaunchTarget()
 	{
 		while (true)

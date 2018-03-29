@@ -58,7 +58,6 @@
      <Compile Include="Assets\Scripts\Manager.cs" />
      <Compile Include="Assets\Scripts\Mine.cs" />
      <Compile Include="Assets\Scripts\MousePos.cs" />
-     <Compile Include="Assets\Scripts\PopularReferences.cs" />
      <Compile Include="Assets\Scripts\Seeker.cs" />
      <Compile Include="Assets\Scripts\Trooper.cs" />
  <Reference Include="UnityEngine.UI">
